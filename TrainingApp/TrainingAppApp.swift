@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct TrainingAppApp: App {
+    
+    @StateObject var vm: ViewModel = ViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch vm.currentView {
+            case .preloader:
+                Preloader()
+            case .onboarding:
+                OnBoarding()
+                    .transition(.opacity.animation(.easeInOut))
+            case .main:
+                ContentView()
+                    .transition(.opacity.animation(.easeInOut))
+            }
         }
+        .environmentObject(vm)
+        
     }
 }
