@@ -16,8 +16,8 @@ struct OnBoarding: View {
             Image("sportsman")
                 .resizable()
                 .scaledToFit()
-                .offset(x: -40)
-                .scaleEffect(1.2)
+                .offset(x: -45)
+                .scaleEffect(1.1)
             
             VStack(alignment: .leading) {
                 Text("Unleash Your Potential")
