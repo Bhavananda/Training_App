@@ -26,7 +26,7 @@ struct AppTab: View {
                             .position(x: geometry.size.width / 2, y: 1 )
                     }
                 )
-            HStack(alignment: .center, spacing: 66) {
+            HStack(spacing: 74) {
                 Button {
                     selectedTab = .workout
                 } label: {
@@ -41,7 +41,6 @@ struct AppTab: View {
                             .font(.system(size: 10, weight: .regular))
                             .foregroundStyle(selectedTab == .workout ? Color.app_Pink : colorBack2)
                     }
-                    .mask(selectedTab == .workout ? Color.pink : colorBack2)
                 }
                 
                 Button {
@@ -73,10 +72,9 @@ struct AppTab: View {
                             .font(.system(size: 10, weight: .regular))
                             .foregroundStyle(selectedTab == .settings ? Color.app_Pink : colorBack2)
                     }
-                    
-                    .mask(selectedTab == .settings ? Color.pink : colorBack2)
                 }
             }
+            .frame(maxWidth: .infinity)
         }
         .frame(height: 91)
         .frame(maxWidth: .infinity)
