@@ -78,13 +78,14 @@ struct TimerView: View {
                         Image("elipse")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 270, height: 270)
+                            
                         
                         Text("\(formattedTime)")
                             .font(.custom("BebasNeue-Bold", size: 64))
                             .foregroundStyle(.white)
                             .padding(.top)
                     }
+                    
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
                             .fill(colorBack)

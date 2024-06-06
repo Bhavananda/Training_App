@@ -111,6 +111,7 @@ struct MainView: View {
                             }
                         }
                     }
+                    .padding(.bottom, 40)
                     .padding(.top, 24)
                 }
                 .padding(.top, 32)
