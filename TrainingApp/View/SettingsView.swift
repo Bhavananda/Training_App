@@ -9,66 +9,50 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @EnvironmentObject var vm: ViewModel
     
     var body: some View {
-        ZStack {
-            App_Background1()
-            
-            VStack(alignment: .leading) {
-                Text("SETTINGS")
-                    .foregroundStyle(.white)
-                    .padding(.bottom, 32)
-                ScrollView {
-                    VStack(spacing: 0) {
-                        MyButton(text: "Privacy Policy", icon: "folder")
-                        Divider()
-                            
-                        MyButton(text: "Privacy Policy", icon: "folder")
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
+        NavigationView {
+            ZStack {
+                App_Background1()
                 
-                
-                
-                .padding(.trailing, 19)
-                
-            }
-            .padding(.leading, 13)
-        }
-        
-    }
-}
-
-struct MyButton: View {
-    
-    var colorBack = Color(UIColor( #colorLiteral(red: 0.1764705882, green: 0.1764705882, blue: 0.1764705882, alpha: 1)))
-    var text: String
-    var icon: String
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(colorBack)
-            
-            VStack {
-                HStack {
-                    Image(systemName: icon)
-                    Text(text)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("SETTINGS")
+                        .font(.custom("BebasNeue-Bold", size: 32))
                         .foregroundStyle(.white)
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .frame(width: 24, height: 24)
-                        .foregroundColor(.white.opacity(0.2))
+                        .padding(.bottom, 32)
+                    
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            ForEach(vm.settingsArray) { setting in
+                                NavigationLink {
+                                    SettingsDetailView(settingModel: setting)
+                                } label: {
+                                    SettingCell(name: setting.name, icon: setting.icon)
+                                }
+                                
+                                if setting != vm.settingsArray.last {
+                                    Rectangle()
+                                        .fill(.white.opacity(0.2))
+                                        .frame(height: 1)
+                                        .padding(.horizontal, 12)
+                                }
+                                
+                                
+                            }
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        
+                    }
+                    .padding(.trailing, 19)
                 }
-                .padding(.leading, 12)
-                .padding(.trailing, 16)
-                .frame(height: 44)
+                .padding(.leading, 13)
                 
             }
         }
     }
 }
-
 #Preview {
     SettingsView()
+        .environmentObject(ViewModel())
 }

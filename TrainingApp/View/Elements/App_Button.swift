@@ -16,10 +16,6 @@ struct App_Button: View {
     var functional: () -> Void
     
     
-    
-   
-    var colorButton = Color(UIColor( #colorLiteral(red: 0.9019607843, green: 0, blue: 0.2862745098, alpha: 1)))
-    
     var body: some View {
         if !isImage {
             Button {
@@ -27,7 +23,7 @@ struct App_Button: View {
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(colorButton)
+                        .fill(Color.app_Pink)
                     HStack {
                         Text(name)
                             .font(.custom("BebasNeue-Bold", size: 20))
@@ -63,7 +59,7 @@ struct App_Button: View {
         } else {
            ZStack {
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(colorButton)
+                    .fill(Color.app_Pink)
                 HStack {
                     Text(name)
                         .font(.custom("BebasNeue-Bold", size: 20))

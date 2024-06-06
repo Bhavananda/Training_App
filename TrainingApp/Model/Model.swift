@@ -88,6 +88,15 @@ struct ExerciseResult: Identifiable {
 }
 
 
+struct App_Setting: Identifiable, Equatable {
+    
+    var id = UUID()
+    let name: String
+    let icon: String
+    let text: String
+}
+
+
 //-Name
 //-Set Duration
 //-Exercises Count

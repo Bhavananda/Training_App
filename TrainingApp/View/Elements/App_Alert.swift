@@ -33,21 +33,29 @@ struct App_Alert: View {
                     Button {
                        funcFinish()
                     } label: {
-                        Text("Finish")
-                            .bold()
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.clear)
+                            Text("Finish")
+                                .bold()
+                        }
                     }
+                    .frame(maxWidth: .infinity)
+                    
+                    
                     Divider()
                         .foregroundStyle(.white)
                     Button {
                         funcCancel()
                     } label: {
-                        Text("Cancel")
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.clear)
+                            Text("Cancel")
+                        }
                     }
                     Divider()
-                   
                 }
-               
-                
             }
         }
         .background(colorBack.opacity(0.82))

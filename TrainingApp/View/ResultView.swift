@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ResultView: View {
     
-    var colorBack = Color(UIColor( #colorLiteral(red: 0.1333333333, green: 0.1333333333, blue: 0.1333333333, alpha: 1)))
-    
     @Binding var popToMain: Bool
     
     @Environment(\.dismiss) var dismiss
@@ -30,26 +28,36 @@ struct ResultView: View {
             ZStack(alignment: .top) {
                 Image("result_back")
                     .resizable()
+                    .scaledToFit()
                     .frame(height: 293)
                 
-                VStack {
-                    VStack {
+                VStack(spacing: 0) {
+                    VStack(spacing: 24) {
                         VStack(spacing: 11) {
                             Text("Workout complete!")
+                                .foregroundStyle(Color.app_Pink)
+                                .font(.system(size: 17, weight: .heavy))
                             Text("\(setModel.name)")
+                                .font(.custom("BebasNeue-Bold", size: 44))
                         }
-                        HStack {
+                        HStack(spacing: 66) {
                             VStack(spacing: 8) {
                                 Text("Time")
+                                    .foregroundStyle(.white.opacity(0.5))
+                                    .font(.system(size: 12, weight: .regular))
                                 Text("\(totalDuration.formattedTime)")
+                                    .font(.custom("BebasNeue-Bold", size: 32))
                             }
                             
                             VStack(spacing: 8) {
                                 Text("Exer")
+                                    .foregroundStyle(.white.opacity(0.5))
+                                    .font(.system(size: 12, weight: .regular))
                                 Text("\(vm.exerciseResults.count)/\(setModel.exercisesCount)")
+                                    .font(.custom("BebasNeue-Bold", size: 32))
                             }
                         }
-                        .padding(.top, 24)
+//                        .padding(.top, 24)
                     }
                 }
                 .foregroundStyle(.white)
@@ -61,13 +69,19 @@ struct ResultView: View {
             
             VStack(alignment: .leading) {
                 Text("Deatil of training".uppercased())
+                    .font(.custom("BebasNeue-Bold", size: 24))
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 16) {
                         ForEach(vm.exerciseResults) { exer in
                             HStack {
                                 Text("\(exer.exerciseName)")
+                                    .font(.custom("BebasNeue-Regular", size: 20))
                                 Spacer()
-                                Text("\(exer.duration.formattedTime) min.")
+                                Text("\(exer.duration.formattedTime)")
+                                    .font(.custom("BebasNeue-Regular", size: 20))
+                                + Text("  min.")
+                                    .font(.system(size: 12, weight: .regular))
+                                    .foregroundStyle(.white.opacity(0.5))
                                 
                             }
                         }
@@ -91,7 +105,7 @@ struct ResultView: View {
             .padding(.top, 34)
         }
         .navigationBarHidden(true)
-        .background(colorBack)
+        .background(Color.app_Back_Gray)
         .ignoresSafeArea(edges: .top)
         .onAppear {
             vm.isTabBarisHidden = true

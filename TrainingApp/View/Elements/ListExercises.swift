@@ -28,12 +28,18 @@ struct ListExercises: View {
                     }
                 )
             VStack(alignment: .leading, spacing: 12) {
-                Text(name)
+                Text(name
+                    .uppercased())
+                .font(.custom("BebasNeue-Bold", size: 20))
+                
+                
                 HStack {
                     Text("Recommended to repeat:")
+                        .font(.system(size: 12, weight: .regular))
                         .foregroundStyle(.white.opacity(0.5))
                     Spacer()
                     Text("X\(repeats)")
+                        .font(.custom("BebasNeue-Bold", size: 12))
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -49,7 +55,7 @@ struct ListExercises: View {
 struct GPRoundedRectangle: Shape {
     var cornerRadius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
-
+    
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
         return Path(path.cgPath)

@@ -35,7 +35,9 @@ struct TimerView: View {
             
             VStack {
                 HStack {
-                    Text("\(indexExercise + 1)/\(setModel.exercisesCount)")
+                    Text("\(indexExercise + 1)")
+                        .font(.custom("BebasNeue-Regular", size: 28)) + Text("/\(setModel.exercisesCount)")
+                        .font(.custom("BebasNeue-Regular", size: 16))
                     Spacer()
                     Button {
                         isAlertShow = true
@@ -53,15 +55,18 @@ struct TimerView: View {
                 .padding(.horizontal, 16)
                 .foregroundStyle(.white)
                 
-                VStack {
+                VStack(spacing: 20) {
                     HStack{
                         Text("X\(setModel.exercises[indexExercise].repeats)")
                             .foregroundStyle(.white.opacity(0.5))
                         Text("\(setModel.exercises[indexExercise].name)".uppercased())
                     }
+                    .font(.custom("BebasNeue-Bold", size: 32))
+                    
                     Text("\(setModel.exercises[indexExercise].description)")
                         .multilineTextAlignment(.center)
                         .lineLimit(3)
+                        .font(.system(size: 12, weight: .light))
                 }
                 .frame(height: 95)
                 .foregroundStyle(.white)
@@ -76,8 +81,9 @@ struct TimerView: View {
                             .frame(width: 270, height: 270)
                         
                         Text("\(formattedTime)")
-                            .font(.largeTitle)
+                            .font(.custom("BebasNeue-Bold", size: 64))
                             .foregroundStyle(.white)
+                            .padding(.top)
                     }
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
@@ -87,10 +93,13 @@ struct TimerView: View {
                                     .stroke(.white.opacity(0.1), lineWidth: 1)
                             }
                         HStack(alignment: .center) {
-                            HStack {
-                                Text("Next:")
+                            HStack(spacing: 12) {
+                                Text("Next :")
+                                    .font(.system(size: 17, weight: .semibold))
                                 if indexExercise < setModel.exercisesCount - 1 {
-                                    Text("\(setModel.exercises[indexExercise + 1].name)")
+                                    Text("\(setModel.exercises[indexExercise + 1].name.uppercased())")
+                                        .font(.custom("BebasNeue-Regular", size: 20))
+                                        .padding(.top, 2)
                                 } else {
                                     Text("FINISH")
                                 }
@@ -172,7 +181,7 @@ struct TimerView: View {
             ZStack {
                 if navigateToResult {
                     ResultView(popToMain: $popToMain, setModel: setModel)
-                        .transition(.move(edge: .leading))
+                        .transition(.move(edge: .trailing))
                 }
             }
             .zIndex(2.0)

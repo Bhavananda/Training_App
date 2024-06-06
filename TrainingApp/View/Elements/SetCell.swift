@@ -28,12 +28,14 @@ struct SetCell: View {
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text(name)
+                                .font(.custom("BebasNeue-Bold", size: 24))
                             HStack(spacing: 10) {
                                 HStack {
                                     Image("icon_clock")
                                         .resizable()
                                         .frame(width: 16, height: 16)
                                     Text("\(duration) min.")
+                                        
                                 }
                                 .padding(8)
                                 .background(.white.opacity(0.1))
@@ -53,6 +55,7 @@ struct SetCell: View {
                                 
                             }
                         }
+                        .font(.system(size: 10))
                         .padding(.leading, 12)
                         .foregroundStyle(.white)
                     }

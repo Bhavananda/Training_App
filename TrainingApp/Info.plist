@@ -6,6 +6,8 @@
 	<array>
 		<string>BebasNeue-Regular.ttf</string>
 		<string>BebasNeue-Bold.ttf</string>
+		<string>BebasNeue-Light.ttf</string>
+		<string>BebasNeue-Book.ttf</string>
 	</array>
 </dict>
 </plist>

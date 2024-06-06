@@ -28,6 +28,7 @@ struct HeaderBack: View {
             }
             Spacer()
             Text(title)
+                .font(.system(size: 15, weight: .medium))
             Spacer()
             Image(systemName: "")
                 .frame(width: 24, height: 24)

@@ -18,17 +18,28 @@ struct AppTab: View {
         ZStack {
             Rectangle()
                 .fill(colorBack)
+                .overlay(
+                    GeometryReader { geometry in
+                        Rectangle()
+                            .fill(colorBack2)
+                            .frame(width: geometry.size.width, height: 3 )
+                            .position(x: geometry.size.width / 2, y: 1 )
+                    }
+                )
             HStack(alignment: .center, spacing: 66) {
                 Button {
                     selectedTab = .workout
                 } label: {
-                    VStack {
+                    VStack(spacing: 8) {
                         Image("icon_ball")
+                            .renderingMode(.template)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 32, height: 32)
+                            .foregroundStyle(selectedTab == .workout ? Color.app_Pink : colorBack2)
                         Text("Workout")
-                            .foregroundStyle(colorBack2)
+                            .font(.system(size: 10, weight: .regular))
+                            .foregroundStyle(selectedTab == .workout ? Color.app_Pink : colorBack2)
                     }
                     .mask(selectedTab == .workout ? Color.pink : colorBack2)
                 }
@@ -38,7 +49,7 @@ struct AppTab: View {
                 } label: {
                     ZStack {
                         Circle()
-                            .fill(.pink)
+                            .fill(Color.app_Pink)
                         Image(systemName: "plus")
                             .foregroundStyle(.white)
                             .frame(width: 24, height: 24)
@@ -46,18 +57,23 @@ struct AppTab: View {
                     }
                     .fixedSize()
                 }
+                .padding(.bottom, 14)
                 
                 Button {
                     selectedTab = .settings
                 } label: {
-                    VStack {
+                    VStack(spacing: 8) {
                         Image("icon_settings")
+                            .renderingMode(.template)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 32, height: 32)
+                            .foregroundStyle(selectedTab == .settings ? Color.app_Pink : colorBack2)
                         Text("Settings")
-                            .foregroundStyle(colorBack2)
+                            .font(.system(size: 10, weight: .regular))
+                            .foregroundStyle(selectedTab == .settings ? Color.app_Pink : colorBack2)
                     }
+                    
                     .mask(selectedTab == .settings ? Color.pink : colorBack2)
                 }
             }

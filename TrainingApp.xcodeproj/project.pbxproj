@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1A01B8B22C10DAF200B60149 /* App_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A01B8B12C10DAF200B60149 /* App_Alert.swift */; };
+		1A01B8B82C11AE6400B60149 /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A01B8B32C11AE6300B60149 /* BebasNeue-Bold.ttf */; };
+		1A01B8B92C11AE6400B60149 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A01B8B42C11AE6300B60149 /* BebasNeue-Regular.ttf */; };
+		1A01B8BB2C11AE6400B60149 /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A01B8B62C11AE6400B60149 /* BebasNeue-Book.ttf */; };
+		1A01B8BC2C11AE6400B60149 /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A01B8B72C11AE6400B60149 /* BebasNeue-Light.ttf */; };
+		1A01B8BE2C11AEE300B60149 /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A01B8BD2C11AEE300B60149 /* BebasNeue-Thin.ttf */; };
+		1A6A940C2C11CE57004D3615 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A940B2C11CE57004D3615 /* SettingCell.swift */; };
+		1A6A940E2C11D248004D3615 /* SettingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A940D2C11D248004D3615 /* SettingsDetailView.swift */; };
 		1ABEDC952C0DA4C2001F2A09 /* TrainingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDC942C0DA4C2001F2A09 /* TrainingAppApp.swift */; };
 		1ABEDC972C0DA4C2001F2A09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDC962C0DA4C2001F2A09 /* ContentView.swift */; };
 		1ABEDC992C0DA4C4001F2A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABEDC982C0DA4C4001F2A09 /* Assets.xcassets */; };
@@ -17,7 +24,6 @@
 		1ABEDCA72C0DA718001F2A09 /* Preloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDCA62C0DA718001F2A09 /* Preloader.swift */; };
 		1ABEDCA92C0DAED2001F2A09 /* App_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDCA82C0DAED2001F2A09 /* App_Button.swift */; };
 		1ABEDCAC2C0DBA1E001F2A09 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDCAB2C0DBA1E001F2A09 /* OnBoarding.swift */; };
-		1ABEDCC22C0DC5D6001F2A09 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ABEDCC12C0DC5D6001F2A09 /* BebasNeue-Regular.ttf */; };
 		1ABEDCC42C0DC989001F2A09 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDCC32C0DC989001F2A09 /* MainView.swift */; };
 		1ABEDCC62C0DD468001F2A09 /* SetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDCC52C0DD468001F2A09 /* SetCell.swift */; };
 		1ABEDCC82C0DD4B5001F2A09 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEDCC72C0DD4B5001F2A09 /* Model.swift */; };
@@ -38,6 +44,13 @@
 
 /* Begin PBXFileReference section */
 		1A01B8B12C10DAF200B60149 /* App_Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_Alert.swift; sourceTree = "<group>"; };
+		1A01B8B32C11AE6300B60149 /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		1A01B8B42C11AE6300B60149 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		1A01B8B62C11AE6400B60149 /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
+		1A01B8B72C11AE6400B60149 /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		1A01B8BD2C11AEE300B60149 /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
+		1A6A940B2C11CE57004D3615 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		1A6A940D2C11D248004D3615 /* SettingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailView.swift; sourceTree = "<group>"; };
 		1ABEDC912C0DA4C2001F2A09 /* TrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABEDC942C0DA4C2001F2A09 /* TrainingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAppApp.swift; sourceTree = "<group>"; };
 		1ABEDC962C0DA4C2001F2A09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +62,6 @@
 		1ABEDCA82C0DAED2001F2A09 /* App_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_Button.swift; sourceTree = "<group>"; };
 		1ABEDCAA2C0DB6A3001F2A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1ABEDCAB2C0DBA1E001F2A09 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
-		1ABEDCC12C0DC5D6001F2A09 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		1ABEDCC32C0DC989001F2A09 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1ABEDCC52C0DD468001F2A09 /* SetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCell.swift; sourceTree = "<group>"; };
 		1ABEDCC72C0DD4B5001F2A09 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -129,6 +141,7 @@
 				1ABEDCD32C0E045B001F2A09 /* SetDetail.swift */,
 				1ABEDCDF2C0F525B001F2A09 /* TimerView.swift */,
 				1ABEDCE52C1091B3001F2A09 /* ResultView.swift */,
+				1A6A940D2C11D248004D3615 /* SettingsDetailView.swift */,
 				1ABEDCDB2C0F3D62001F2A09 /* SettingsView.swift */,
 				1ABEDCAE2C0DBAB3001F2A09 /* Elements */,
 			);
@@ -143,11 +156,12 @@
 				1ABEDCD52C0E0ADC001F2A09 /* ListExercises.swift */,
 				1ABEDCDD2C0F5080001F2A09 /* App_Progress.swift */,
 				1ABEDCD12C0DF6F6001F2A09 /* HeaderBack.swift */,
+				1A6A940B2C11CE57004D3615 /* SettingCell.swift */,
+				1A01B8B12C10DAF200B60149 /* App_Alert.swift */,
+				1ABEDCA82C0DAED2001F2A09 /* App_Button.swift */,
 				1ABEDCA22C0DA4DF001F2A09 /* App_Background1.swift */,
 				1ABEDCA42C0DA5E3001F2A09 /* App_Background2.swift */,
 				1ABEDCE32C10874C001F2A09 /* Helpers.swift */,
-				1A01B8B12C10DAF200B60149 /* App_Alert.swift */,
-				1ABEDCA82C0DAED2001F2A09 /* App_Button.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -155,7 +169,11 @@
 		1ABEDCBC2C0DC181001F2A09 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				1ABEDCC12C0DC5D6001F2A09 /* BebasNeue-Regular.ttf */,
+				1A01B8B32C11AE6300B60149 /* BebasNeue-Bold.ttf */,
+				1A01B8B62C11AE6400B60149 /* BebasNeue-Book.ttf */,
+				1A01B8B72C11AE6400B60149 /* BebasNeue-Light.ttf */,
+				1A01B8B42C11AE6300B60149 /* BebasNeue-Regular.ttf */,
+				1A01B8BD2C11AEE300B60149 /* BebasNeue-Thin.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -236,9 +254,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A01B8BB2C11AE6400B60149 /* BebasNeue-Book.ttf in Resources */,
 				1ABEDC9C2C0DA4C4001F2A09 /* Preview Assets.xcassets in Resources */,
+				1A01B8B82C11AE6400B60149 /* BebasNeue-Bold.ttf in Resources */,
+				1A01B8B92C11AE6400B60149 /* BebasNeue-Regular.ttf in Resources */,
+				1A01B8BE2C11AEE300B60149 /* BebasNeue-Thin.ttf in Resources */,
 				1ABEDC992C0DA4C4001F2A09 /* Assets.xcassets in Resources */,
-				1ABEDCC22C0DC5D6001F2A09 /* BebasNeue-Regular.ttf in Resources */,
+				1A01B8BC2C11AE6400B60149 /* BebasNeue-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +273,7 @@
 			files = (
 				1ABEDC972C0DA4C2001F2A09 /* ContentView.swift in Sources */,
 				1ABEDCC42C0DC989001F2A09 /* MainView.swift in Sources */,
+				1A6A940E2C11D248004D3615 /* SettingsDetailView.swift in Sources */,
 				1A01B8B22C10DAF200B60149 /* App_Alert.swift in Sources */,
 				1ABEDCE62C1091B3001F2A09 /* ResultView.swift in Sources */,
 				1ABEDCA92C0DAED2001F2A09 /* App_Button.swift in Sources */,
@@ -267,6 +290,7 @@
 				1ABEDC952C0DA4C2001F2A09 /* TrainingAppApp.swift in Sources */,
 				1ABEDCA32C0DA4DF001F2A09 /* App_Background1.swift in Sources */,
 				1ABEDCE42C10874C001F2A09 /* Helpers.swift in Sources */,
+				1A6A940C2C11CE57004D3615 /* SettingCell.swift in Sources */,
 				1ABEDCD22C0DF6F6001F2A09 /* HeaderBack.swift in Sources */,
 				1ABEDCD42C0E045B001F2A09 /* SetDetail.swift in Sources */,
 				1ABEDCAC2C0DBA1E001F2A09 /* OnBoarding.swift in Sources */,

@@ -43,6 +43,7 @@ struct SetDetail: View {
                 
                 VStack(alignment: .leading) {
                     Text("LIST OF EXERCISES")
+                        .font(.custom("BebasNeue-Bold", size: 24))
                         .padding(.bottom, 24)
                         .foregroundColor(.white)
                     ScrollView(showsIndicators: false) {
@@ -78,7 +79,14 @@ struct SetDetail: View {
             ZStack {
                 VStack(alignment: .leading) {
                     Text(setModel.name.uppercased())
+                        
+                        .font(.custom("BebasNeue-Bold", size: 44))
                         .foregroundStyle(.white)
+                        .lineLimit(2)
+                        .frame(maxWidth: 200, alignment: .leading)
+                        
+                        
+                        
                     HStack {
                         HStack {
                             Image("icon_clock")
@@ -102,11 +110,12 @@ struct SetDetail: View {
                         .background(.white.opacity(0.1))
                         .cornerRadius(8)
                     }
+                    .font(.system(size: 15, weight: .regular))
                 }
+                
                 .foregroundColor(.white)
                 
             }
-            
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 19)
             .padding(.top, 104)

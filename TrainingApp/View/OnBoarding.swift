@@ -25,6 +25,7 @@ struct OnBoarding: View {
                     .foregroundStyle(.white)
                 
                 Text("Dive into the world of American football training. Explore dynamic workouts designed to unlock your gridiron potential.")
+                    .font(.system(size: 15, weight: .regular))
                     .foregroundStyle(.white.opacity(0.5))
                     .multilineTextAlignment(.leading)
             }

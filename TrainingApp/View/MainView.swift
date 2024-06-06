@@ -36,6 +36,7 @@ struct MainView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     Spacer()
                     Text("HELLO, CHAMPION! 👋")
+                        .font(.custom("BebasNeue-Bold", size: 28))
                         .foregroundStyle(.white)
                     
                     ZStack {
@@ -44,8 +45,9 @@ struct MainView: View {
                             .frame(height: 50)
                             .frame(maxWidth: .infinity)
                         HStack {
-                            TextField("Search...", text: $text)
-                                .padding(.leading)
+                            TextField("Search...", text: $text, prompt: Text("Search...")
+                                .foregroundStyle(.gray.opacity(0.6)))
+                                .padding(.leading, 12)
                                 .foregroundColor(.gray.opacity(0.8))
                             ZStack {
                                 RoundedRectangle(cornerRadius: 4)
@@ -73,13 +75,17 @@ struct MainView: View {
                 VStack {
                     HStack {
                         Text("GENERATED SETS")
+                            .font(.custom("BebasNeue-Bold", size: 24))
+                            .foregroundStyle(.white)
                         Spacer()
                         NavigationLink(isActive: self.$popToMain2) {
                             GeneratedSets(popToMain: $popToMain2)
                         } label: {
                             HStack {
                                 Text("View all")
+                                    .font(.system(size: 12, weight: .bold))
                                 Image(systemName: "arrow.forward")
+                                    .frame(width: 18 ,height: 18)
                             }
                             .foregroundStyle(colorMain)
                         }

@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct SettingsDetailView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
+    var settingModel: App_Setting
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+            ZStack {
+            App_Background1()
+                VStack(spacing: 0) {
+                    HeaderBack(title: settingModel.name) {
+                        dismiss()
+                    }
+                    .padding(.bottom, 32)
+                    ScrollView {
+                        Text(settingModel.text)
+                            .font(.system(size: 17, weight: .regular))
+                            .foregroundStyle(.white)
+                            .multilineTextAlignment(.leading)
+                    }
+                }
+                .padding(.horizontal, 16)
+            }
+            .navigationBarHidden(true)
+            
+        }
+  
 }
 
 #Preview {
-    SettingsDetailView()
+    SettingsDetailView(settingModel: App_Setting(name: "Term", icon: "icon_term", text: "ALALALALALLALAAL"))
 }
