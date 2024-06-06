@@ -21,6 +21,7 @@ struct SettingsView: View {
                         .font(.custom("BebasNeue-Bold", size: 32))
                         .foregroundStyle(.white)
                         .padding(.bottom, 32)
+                        .padding(.top, 20)
                     
                     ScrollView {
                         VStack(spacing: 0) {
